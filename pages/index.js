@@ -6,10 +6,11 @@ import SkipNextIcon from '@mui/icons-material/SkipNext';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import * as BABYLON from 'babylonjs';
 import 'babylonjs-loaders';
-import { getFlowerScene } from './flowervisualizer';
-import { getBarsScene } from './barsvisualizer';
+import { getFlowerScene } from '../scenes/flowervisualizer';
+import { getBarsScene } from '../scenes/barsvisualizer';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -264,6 +265,20 @@ export default class Home extends React.Component {
           }} onClick={() => this.previousScene()}
         >
           <ArrowForwardIosIcon />
+        </IconButton>
+        <IconButton size="small" variant="contained"
+          target="_blank"
+          href="https://github.com/mohammadmohebi/music-visualization"
+          style={{
+            zIndex: 1000,
+            position: 'fixed',
+            right: '20px',
+            opacity: 0.6,
+            top: '20px',
+            color: '#C490E4',
+          }}
+        >
+          <GitHubIcon />
         </IconButton>
       </React.Fragment>
     );
